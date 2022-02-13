@@ -1,0 +1,8 @@
+---
+- name: nginx - install apt package
+  apt:
+    name: "nginx={{ nginx_version }}"
+    state: present
+    update_cache: yes
+  notify:
+    nginx - restart
